@@ -9,95 +9,71 @@
             background-color: #4a0e0e; 
             color: white; 
             font-family: Arial, sans-serif; 
-            margin: 0; 
-            padding: 0; 
-            text-align: center; 
+            margin: 0; padding: 0; text-align: center; 
         }
 
         
         .navbar-container {
-            display: flex;
-            align-items: stretch;
-            margin: 10px auto;
-            max-width: 95%;
-            box-shadow: 0px 4px 15px rgba(0,0,0,0.4);
+            display: flex; align-items: stretch; margin: 15px auto;
+            max-width: 95%; box-shadow: 0px 4px 15px rgba(0,0,0,0.4);
         }
-
-        
         .logo-box {
-            background-color: black;
-            padding: 10px 25px;
-            display: flex;
-            align-items: center;
-            clip-path: polygon(0% 0%, 100% 0%, 88% 100%, 0% 100%); 
-            z-index: 2;
-            flex-shrink: 0;
+            background-color: black; padding: 10px 25px; display: flex;
+            align-items: center; clip-path: polygon(0% 0%, 100% 0%, 88% 100%, 0% 100%); 
+            z-index: 2; flex-shrink: 0;
         }
-
-        .logo-box img {
-            height: 40px;
-            width: auto;
-        }
-
-        
+        .logo-box img { height: 40px; width: auto; }
         .header {
-            background: #ccc;
-            color: black;
-            flex-grow: 1;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            font-weight: bold;
-            font-size: 11px;
-            text-transform: uppercase;
-            margin-left: -25px;
-            padding-left: 30px;
-        }
-
-        .header span { cursor: pointer; white-space: nowrap; }
-
-        
-        .banner-img { 
-            width: 95%; 
-            max-width: 900px; 
-            border-radius: 10px; 
-            margin: 10px 0;
+            background: #ccc; color: black; flex-grow: 1; display: flex;
+            justify-content: space-around; align-items: center;
+            font-weight: bold; font-size: 11px; text-transform: uppercase;
+            margin-left: -25px; padding-left: 30px;
         }
 
         
+        .banner-img { width: 95%; max-width: 900px; border-radius: 10px; margin: 15px 0; }
         .grid { 
-            display: grid; 
-            grid-template-columns: 1fr 1fr; 
-            gap: 20px; 
-            max-width: 900px; 
-            margin: 0 auto; 
-            padding: 20px;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 20px; 
+            max-width: 900px; margin: 0 auto; padding: 20px;
         }
-
-        .car-link img { 
-            width: 100%; 
-            border-radius: 10px; 
-            display: block; 
-            box-shadow: 0 4px 8px rgba(0,0,0,0.5); 
-        }
+        .car-link img { width: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.5); }
 
         
-        @media (max-width: 600px) {
-            .navbar-container { margin: 5px auto; }
-            
-            .logo-box { padding: 8px 15px; }
-            .logo-box img { height: 25px; } 
+        footer {
+            background-color: #000; 
+            color: #fff; 
+            padding: 50px 20px;
+            margin-top: 50px;
+            text-align: left;
+        }
+        .footer-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1.5fr; 
+            gap: 40px;
+        }
+        .footer-section h3 {
+            font-size: 18px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            color: #fff;
+            border-bottom: 2px solid #4a0e0e; 
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        .footer-section p, .footer-section ul { font-size: 14px; line-height: 1.6; }
+        .footer-section ul { list-style: none; padding: 0; }
+        .footer-section ul li { margin-bottom: 10px; }
+        .footer-section ul li a { color: #ccc; text-decoration: none; transition: 0.3s; }
+        .footer-section ul li a:hover { color: #fff; }
 
-            .header { 
-                font-size: 7px; 
-                margin-left: -15px;
-                padding-left: 20px;
-            }
-
-            .grid { 
-                grid-template-columns: 1fr; 
-                gap: 15px;
-            }
+        
+        @media (max-width: 768px) {
+            .footer-container { grid-template-columns: 1fr; text-align: center; }
+            .grid { grid-template-columns: 1fr; }
+            .header { font-size: 7px; margin-left: -15px; }
+            .logo-box img { height: 25px; }
         }
     </style>
 </head>
@@ -108,30 +84,45 @@
             <img src="logocriscar.jfif" alt="Logo CrisCar">
         </div>
         <div class="header">
-            <span>VEÍCULOS</span>
-            <span>LOCALIZAÇÃO</span>
-            <span>CONTATO</span>
-            <span>EMPRESA</span>
-            <span>FINANCIAMENTO</span>
+            <span>VEÍCULOS</span> <span>LOCALIZAÇÃO</span> <span>CONTATO</span> <span>EMPRESA</span> <span>FINANCIAMENTO</span>
         </div>
     </div>
 
-    <img src="layoutcriscar.jfif" class="banner-img" alt="Banner">
+    <img src="layoutcriscar.jfif" class="banner-img" alt="Banner Principal">
 
     <div class="grid">
-        <a href="https://wa.me/5512991082086?text=Olá,%20tenho%20interesse%20no%20Polo!" target="_blank" class="car-link">
-            <img src="carro1.jfif" alt="Polo">
-        </a>
-        <a href="https://wa.me/5512991082086?text=Olá,%20tenho%20interesse%20no%20Honda%20Fit!" target="_blank" class="car-link">
-            <img src="carro2.jfif" alt="Honda Fit">
-        </a>
-        <a href="https://wa.me/5512991082086?text=Olá,%20tenho%20interesse%20no%20HB20X!" target="_blank" class="car-link">
-            <img src="carro3.jfif" alt="HB20X">
-        </a>
-        <a href="https://wa.me/5512991082086?text=Olá,%20tenho%20interesse%20no%20Honda%20City!" target="_blank" class="car-link">
-            <img src="carro4.jfif" alt="Honda City">
-        </a>
+        <a href="https://wa.me/5512991082086" target="_blank" class="car-link"><img src="carro1.jfif"></a>
+        <a href="https://wa.me/5512991082086" target="_blank" class="car-link"><img src="carro2.jfif"></a>
+        <a href="https://wa.me/5512991082086" target="_blank" class="car-link"><img src="carro3.jfif"></a>
+        <a href="https://wa.me/5512991082086" target="_blank" class="car-link"><img src="carro4.jfif"></a>
     </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Quem Somos</h3>
+                <p>Somos especializados na venda de veículos novos e usados, nacionais e importados. Com certeza você não só apreciará como irá comprar seu veículo conosco. Todos nossos veículos são revisados criteriosamente, possibilitando dar aos nossos clientes tranquilidade na hora da compra. Não perca tempo! Compre seu veículo com quem mais entende do assunto. Nossos vendedores terão o prazer em atendê-lo.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Mapa do Site</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Veículos</a></li>
+                    <li><a href="#">Financiamento</a></li>
+                    <li><a href="#">Localização</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p><strong>Telefone:</strong> (12) 99108-2086</p>
+                <p><strong>Endereço:</strong><br>
+                Rua Frei Modesto Maria de Taubaté, Nº 415<br>
+                Jardim Santa Clara - Taubaté - SP</p>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
