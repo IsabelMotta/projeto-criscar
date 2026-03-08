@@ -18,24 +18,24 @@
         .navbar-container {
             display: flex;
             align-items: stretch;
-            margin: 20px auto;
-            max-width: 95%; 
+            margin: 10px auto;
+            max-width: 95%;
             box-shadow: 0px 4px 15px rgba(0,0,0,0.4);
         }
 
         
         .logo-box {
             background-color: black;
-            padding: 15px 40px; 
+            padding: 10px 25px;
             display: flex;
             align-items: center;
-            
             clip-path: polygon(0% 0%, 100% 0%, 88% 100%, 0% 100%); 
             z-index: 2;
+            flex-shrink: 0;
         }
 
         .logo-box img {
-            height: 55px; 
+            height: 40px;
             width: auto;
         }
 
@@ -48,36 +48,57 @@
             justify-content: space-around;
             align-items: center;
             font-weight: bold;
-            font-size: 13px;
+            font-size: 11px;
             text-transform: uppercase;
-            margin-left: -35px; 
-            padding-left: 45px; 
+            margin-left: -25px;
+            padding-left: 30px;
         }
 
-        .header span { cursor: pointer; }
+        .header span { cursor: pointer; white-space: nowrap; }
 
         
         .banner-img { 
             width: 95%; 
             max-width: 900px; 
-            border-radius: 12px; 
-            margin: 10px 0 30px 0; 
-            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 10px; 
+            margin: 10px 0;
         }
 
         
         .grid { 
             display: grid; 
             grid-template-columns: 1fr 1fr; 
-            gap: 25px; 
+            gap: 20px; 
             max-width: 900px; 
             margin: 0 auto; 
-            padding: 0 20px 50px 20px;
+            padding: 20px;
         }
 
-        .car-link { text-decoration: none; transition: transform 0.3s; }
-        .car-link:hover { transform: scale(1.03); }
-        .car-link img { width: 100%; border-radius: 10px; display: block; box-shadow: 0 6px 12px rgba(0,0,0,0.5); }
+        .car-link img { 
+            width: 100%; 
+            border-radius: 10px; 
+            display: block; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.5); 
+        }
+
+        
+        @media (max-width: 600px) {
+            .navbar-container { margin: 5px auto; }
+            
+            .logo-box { padding: 8px 15px; }
+            .logo-box img { height: 25px; } 
+
+            .header { 
+                font-size: 7px; 
+                margin-left: -15px;
+                padding-left: 20px;
+            }
+
+            .grid { 
+                grid-template-columns: 1fr; 
+                gap: 15px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -95,7 +116,7 @@
         </div>
     </div>
 
-    <img src="layoutcriscar.jfif" class="banner-img" alt="Banner CrisCar">
+    <img src="layoutcriscar.jfif" class="banner-img" alt="Banner">
 
     <div class="grid">
         <a href="https://wa.me/5512991082086?text=Olá,%20tenho%20interesse%20no%20Polo!" target="_blank" class="car-link">
